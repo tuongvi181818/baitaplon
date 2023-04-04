@@ -18,13 +18,14 @@ public class sqlQLthuvien extends AppCompatActivity {
         Button taodb= (Button) findViewById(R.id.taodb);
         Button create= (Button) findViewById(R.id.create);
         Button delete= (Button) findViewById(R.id.delete);
-
+        
         taodb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             taodb();
+                taodb();
             }
         });
+
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +35,7 @@ public class sqlQLthuvien extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               CreateTheloai();
+                CreateTheloai();
                 CreateNhacungcap();
                 CreateNhaxuatban();
                 CreateTacgia();
@@ -62,39 +63,25 @@ public class sqlQLthuvien extends AppCompatActivity {
     }
     public  void CreateTheloai()
     {
-        SQLiteDatabase database=null;
-            String sql ="CREATE TABLE THELOAI ("+ "MATL  IDENTITY(1,1) PRIMARY KEY,"+ "TENTL TEXT)";
-            try {
-                database=openOrCreateDatabase("qlthuvien.db",MODE_PRIVATE,null);
-                database.execSQL(sql);
-                Toast.makeText(this,"tao THE LOẠI thành công",Toast.LENGTH_LONG).show();
-            }
-            catch (Exception EX)
-            {
-                Toast.makeText(this,"tao THE LOẠI KHÔNG thành công",Toast.LENGTH_LONG).show();
 
-            }
-            finally {
-                database.close();
-            }
+        String sql ="CREATE TABLE THELOAI ("+ "MATL  IDENTITY(1,1) PRIMARY KEY,"+ "TENTL TEXT)";
+        if (code.Action(sql)==false) {
+            Toast.makeText(this,"tao THE LOẠI KHÔNG thành công",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"tao THE LOẠI thành công",Toast.LENGTH_LONG).show();
+        }
 
     }
     public  void CreateNhacungcap()
     {
-        SQLiteDatabase database=null;
-        String sql ="CREATE TABLE NHACUNGCAP ("+ "MANCC IDENTITY(1,1) PRIMARY KEY,"+ "TENNCC TEXT)";
-        try {
-            database=openOrCreateDatabase("qlthuvien.db",MODE_PRIVATE,null);
-            database.execSQL(sql);
-            Toast.makeText(this,"tao NHA CUNG CAP thành công",Toast.LENGTH_LONG).show();
-        }
-        catch (Exception EX)
-        {
-            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
 
-        }
-        finally {
-            database.close();
+        String sql ="CREATE TABLE NHACUNGCAP ("+ "MANCC IDENTITY(1,1) PRIMARY KEY,"+ "TENNCC TEXT)";
+        if (code.Action(sql)==true) {
+            Toast.makeText(this,"tao NHA CUNG CAP  thành công",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"tao NHA CUNG CAP KHOONG thành công",Toast.LENGTH_LONG).show();
         }
 
     }
@@ -102,75 +89,85 @@ public class sqlQLthuvien extends AppCompatActivity {
     {
         SQLiteDatabase database=null;
         String sql ="CREATE TABLE NHAXUATBAN ("+ "MANXB IDENTITY(1,1) PRIMARY KEY,"+ "TENXB TEXT)";
-        try {
-            database=openOrCreateDatabase("qlthuvien.db",MODE_PRIVATE,null);
-            database.execSQL(sql);
+        if (code.Action(sql)==true) {
             Toast.makeText(this,"tao NHA XUAT BAN thành công",Toast.LENGTH_LONG).show();
-        }
-        catch (Exception EX)
-        {
-            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
 
-        }
-        finally {
-            database.close();
+        } else {
+            Toast.makeText(this,"tao NHA XUAT BAN KHOONG thành công",Toast.LENGTH_LONG).show();
         }
 
     }
     public  void CreateTacgia()
     {
-        SQLiteDatabase database=null;
+
         String sql ="CREATE TABLE TACGIA ("+ "MATG IDENTITY(1,1) PRIMARY KEY,"+ "TENTG TEXT)";
-        try {
-            database=openOrCreateDatabase("qlthuvien.db",MODE_PRIVATE,null);
-            database.execSQL(sql);
-            Toast.makeText(this,"tao TACGIA thành công",Toast.LENGTH_LONG).show();
-        }
-        catch (Exception EX)
-        {
-            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
+        if (code.Action(sql)==true) {
+            Toast.makeText(this,"tao TAC GIA thành công",Toast.LENGTH_LONG).show();
 
+        } else {
+            Toast.makeText(this,"tao TAC GIA KHOONG thành công",Toast.LENGTH_LONG).show();
         }
-        finally {
-            database.close();
-        }
-
     }
     public  void CreateSach()
     {
-        SQLiteDatabase database=null;
-        String sql = "CREATE TABLE SACH (MASACH TEXT PRIMARY KEY,TESACH TEXT,SOTRANG INT ,MATL NUMERIC, FOREIGN KEY (MATL) REFERENCES THELOAI(MATL))";
-        try {
-            database=openOrCreateDatabase("qlthuvien.db",MODE_PRIVATE,null);
-            database.execSQL(sql);
-            Toast.makeText(this,"tao SÁCH thành công",Toast.LENGTH_LONG).show();
-        }
-        catch (Exception EX)
-        {
-            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
 
-        }
-        finally {
-            database.close();
+        String sql = "CREATE TABLE SACH (MASACH TEXT PRIMARY KEY,TESACH TEXT,SOTRANG INT ,MATL NUMERIC, FOREIGN KEY (MATL) REFERENCES THELOAI(MATL))";
+        if (code.Action(sql)==true) {
+            Toast.makeText(this,"tao SACH thành công",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
         }
 
     }
     public  void CreateTinhTrang()
     {
-        SQLiteDatabase database=null;
-        String sql ="CREATE TABLE TINHTRANG ("+ "MATT IDENTITY(1,1) PRIMARY KEY,"+ "TENTT TEXT)";
-        try {
-            database=openOrCreateDatabase("qlthuvien.db",MODE_PRIVATE,null);
-            database.execSQL(sql);
-            Toast.makeText(this,"tao TÌNH TRẠNG SÁCH thành công",Toast.LENGTH_LONG).show();
-        }
-        catch (Exception EX)
-        {
-            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
 
+        String sql ="CREATE TABLE TINHTRANG ("+ "MATT IDENTITY(1,1) PRIMARY KEY,"+ "TENTT TEXT)";
+        if (code.Action(sql)==true) {
+            Toast.makeText(this,"tao TINH TRANG thành công",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
         }
-        finally {
-            database.close();
+
+    }
+
+    public  void CreateNhanvien()
+    {
+
+        String sql ="CREATE TABLE NHANVIEN (MANV TEXT PRIMARY KEY , TENNV TEXT , EMAIL TEXT,SODT INT, MATKHAUNV TEXT )";
+        if (code.Action(sql)==true) {
+            Toast.makeText(this,"tao NHAN VIEEN thành công",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
+        }
+
+    }
+    public  void CreateDocgia()
+    {
+
+        String sql ="CREATE TABLE DOCGIA (MADG TEXT PRIMARY KEY , TENDG TEXT , PHAI TEXT,LOP TEXT,KHOA INT, MATKHAUDG TEXT )";
+        if (code.Action(sql)==true) {
+            Toast.makeText(this,"tao DOCGIA thành công",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
+        }
+
+    }
+    public  void CreateNhapsach()
+    {
+
+        String sql ="CREATE TABLE NHAPSACH (SOLUONGNHAP INT, DONGIA INT,NGAYNHAP DATETIME ,MASACH  TEXT , MANCC TEXT ," +
+                " MANV TEXT,FOREIGN KEY (MASACH) REFERENCES SACH(MASACH),FOREIGN KEY (MANCC) REFERENCES NHACUNGCAP(MANCC)" +
+                "FOREIGN KEY (MANV) REFERENCES NHANVIEN(MANV))";
+        if (code.Action(sql)==true) {
+            Toast.makeText(this,"NHAP SACH thành công",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"tao  KHÔNG thành công",Toast.LENGTH_LONG).show();
         }
 
     }
