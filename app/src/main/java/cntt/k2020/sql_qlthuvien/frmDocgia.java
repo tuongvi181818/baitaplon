@@ -75,8 +75,7 @@ public class frmDocgia extends AppCompatActivity {
 
 
         cancledg=(Button) findViewById(R.id.cancledg);
-
-
+        ///arsfdgjgk
 
     }
 }
