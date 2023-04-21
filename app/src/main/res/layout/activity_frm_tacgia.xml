@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frmTacgia">
+
+    <TableLayout
+        android:layout_width="416dp"
+        android:layout_height="733dp"
+        android:background="#ccffff"
+        android:collapseColumns=""
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-4dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="6"
+                android:gravity="center"
+                android:text="TAC GIA"
+                android:textColor="@color/black"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="Mã tac gia"
+                android:textColor="@color/black"></TextView>
+
+            <EditText
+                android:id="@+id/matg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:gravity="center"
+                android:hint="nhap ma"
+                android:textColor="@color/black"
+                tools:ignore="TouchTargetSizeCheck"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="Tên tác giả"
+                android:textColor="@color/black"></TextView>
+
+            <EditText
+
+                android:id="@+id/tentg"
+                android:layout_span="4"
+                android:gravity="center"
+                android:hint="nhap ten "
+                android:textColor="@color/black"
+                tools:ignore="TouchTargetSizeCheck">
+
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/themtg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="THÊM"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/suatg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="SỬA"
+                android:textColor="@color/black"></Button>
+
+            <Button
+                android:id="@+id/xoatg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="XÓA"
+                android:textColor="@color/black"></Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/cancletg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="6"
+                android:text="QUAY VỀ "
+                android:textColor="@color/black"></Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="6"
+                android:gravity="center"
+                android:text="HIỂN THỊ "
+                android:textColor="@color/black"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            tools:ignore="MissingConstraints">
+
+            <ListView
+                android:id="@+id/hthitg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="6"
+                android:textColor="@color/black"
+                android:textSize="20dp"></ListView>
+        </TableRow>
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

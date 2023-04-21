@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dangnhap">
+    <TableLayout
+        android:layout_width="416dp"
+        android:layout_height="733dp"
+        android:background="#ccffff"
+        android:collapseColumns=""
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="200dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-4dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+
+                android:text="ĐĂNG NHẬP TÀI KHOẢN"
+                android:textSize="20dp"
+                android:layout_span="2"
+                android:gravity="center"
+                android:textColor="@color/black"></TextView>
+
+
+
+        </TableRow>
+    <TableRow
+
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <TextView
+
+            android:text="Tên đăng nhập"
+            android:textColor="@color/black"></TextView>
+        <EditText
+            android:id="@+id/tendn"
+            android:hint="admin"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck"
+            ></EditText>
+
+
+    </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:text="Mật khẩu"
+                android:textColor="@color/black"></TextView>
+
+            <EditText
+                android:id="@+id/mkdn"
+                android:hint="123456"
+                android:textColor="@color/black"
+                tools:ignore="DuplicateIds,TouchTargetSizeCheck"></EditText>
+
+        </TableRow>
+
+    <TableRow
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_span="2"
+            android:gravity="center"
+            android:text="ĐĂNG NHẬP"
+            android:textColor="@color/black"></Button>
+
+    </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

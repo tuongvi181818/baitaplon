@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item8"
+        android:title="Thông tin "
+        android:orderInCategory="100">
+        <menu >
+            <item android:id="@+id/item9"
+                android:title="thông tin nhân viên"
+                android:orderInCategory="100"
+
+                />
+            <item android:id="@+id/item10"
+                android:title="Thông tin đọc giả"
+                android:orderInCategory="100"
+
+                />
+            <item android:id="@+id/item11"
+                android:title="Thoát"
+                android:orderInCategory="100"
+
+                />
+
+        </menu>
+    </item>
+
+    <item android:id="@+id/item1"
+        android:title="Sách"
+        android:orderInCategory="100">
+        <menu >
+            <item android:id="@+id/item4"
+                android:title="tac gia"
+                android:orderInCategory="100"
+
+                />
+            <item android:id="@+id/item5"
+                android:title="nhà cung cap"
+                android:orderInCategory="100"
+
+                />
+            <item android:id="@+id/item6"
+                android:title="thể loai"
+                android:orderInCategory="100"
+
+                />
+            <item android:id="@+id/item7"
+                android:title="tình trạng"
+                android:orderInCategory="100"
+
+                />
+    </menu>
+    </item>
+
+    <item android:id="@+id/item2"
+        android:title="Tra cứu"
+        android:orderInCategory="100"
+
+        />
+    <item android:id="@+id/item3"
+        android:title="Thoát"
+        android:orderInCategory="100"
+
+        />
+</menu>

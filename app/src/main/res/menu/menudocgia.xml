@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item15"
+        android:title="Thông tin "
+        android:orderInCategory="100">
+    <menu >
+        <item android:id="@+id/item16"
+            android:title="thông tin ca nhan"
+            android:orderInCategory="100"
+
+            />
+        <item android:id="@+id/item17"
+            android:title="sua mat khau"
+            android:orderInCategory="100"
+
+            />
+        <item android:id="@+id/item18"
+            android:title="Thoát"
+            android:orderInCategory="100"
+
+            />
+
+    </menu>
+    </item>
+    <item android:id="@+id/item19"
+        android:title="Tra cứu"
+        android:orderInCategory="100"
+
+        />
+    <item android:id="@+id/item20"
+        android:title="Thoát"
+        android:orderInCategory="100"
+
+        />
+
+
+
+</menu>

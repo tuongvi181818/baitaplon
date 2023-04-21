@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".csdlQlThuvien">
+
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:collapseColumns=""
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        tools:ignore="MissingConstraints"
+        android:background="#ccffff"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <Button
+                android:id="@+id/taodb"
+                android:textColor="@color/black"
+                android:text="Tạo CSDL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <Button
+                android:text="Tạo Create"
+                android:id="@+id/create"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"> </Button>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <Button
+                android:text="XÓA "
+                android:id="@+id/delete"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"> </Button>
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
