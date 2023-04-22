@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".frmNhanvien">
+    tools:context=".frmMuonsach">
 
     <TableLayout
         android:layout_width="416dp"
@@ -24,15 +24,17 @@
             tools:ignore="MissingConstraints">
 
             <TextView
+                android:paddingTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="6"
                 android:gravity="center"
-                android:text="NHÂN VIÊN"
+                android:text="THÔNG TIN MƯỢN SÁCH"
                 android:textColor="@color/black"></TextView>
         </TableRow>
 
         <TableRow
+            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
@@ -42,18 +44,43 @@
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:gravity="center"
-                android:text="Mã nhân viên"
+                android:text="Mã sách"
                 android:textColor="@color/black"></TextView>
 
-            <EditText
-                android:id="@+id/manv"
+            <Spinner
+                android:id="@+id/masm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:gravity="center"
+                android:hint="nhap ma sach muon"
+                android:textColor="@color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="Mã đọc giả"
+                android:textColor="@color/black"></TextView>
+
+            <Spinner
+                android:id="@+id/madgm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="4"
                 android:gravity="center"
                 android:hint="nhap ma"
                 android:textColor="@color/black"
-                tools:ignore="TouchTargetSizeCheck"></EditText>
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </TableRow>
 
         <TableRow
@@ -66,15 +93,15 @@
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:gravity="center"
-                android:text="Tên nhân viên"
+                android:text="Ngày mượn"
                 android:textColor="@color/black"></TextView>
 
             <EditText
 
-                android:id="@+id/tennv"
+                android:id="@+id/ngaymuon"
                 android:layout_span="4"
                 android:gravity="center"
-                android:hint="nhap ten "
+                android:hint="ngay mượn"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck">
 
@@ -91,40 +118,15 @@
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:gravity="center"
-                android:text="EMAIL"
+                android:text="Ngày trả"
                 android:textColor="@color/black"></TextView>
 
             <EditText
 
-                android:id="@+id/email"
+                android:id="@+id/ngaytra"
                 android:layout_span="4"
                 android:gravity="center"
-                android:hint="nhap email"
-                android:textColor="@color/black"
-                tools:ignore="TouchTargetSizeCheck">
-
-            </EditText>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_span="2"
-                android:gravity="center"
-                android:text="SỐ điện thoại"
-                android:textColor="@color/black"></TextView>
-
-            <EditText
-
-                android:id="@+id/sdt"
-                android:layout_span="4"
-                android:gravity="center"
-                android:hint="nhap so dt"
+                android:hint="ngaytra"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck">
 
@@ -140,15 +142,16 @@
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:gravity="center"
-                android:text="Mật khẩu "
+                android:text="Số lượng mượn "
                 android:textColor="@color/black"></TextView>
 
             <EditText
-
+                android:editable="false"
                 android:id="@+id/mknv"
                 android:layout_span="4"
                 android:gravity="center"
-                android:hint="nhap mk"
+                android:hint="1"
+                android:text="1"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck">
 
@@ -161,7 +164,7 @@
             tools:ignore="MissingConstraints">
 
             <Button
-                android:id="@+id/themnv"
+                android:id="@+id/themsm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -169,7 +172,7 @@
                 android:textColor="@color/black" />
 
             <Button
-                android:id="@+id/suanv"
+                android:id="@+id/suasm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -177,7 +180,7 @@
                 android:textColor="@color/black"></Button>
 
             <Button
-                android:id="@+id/xoanv"
+                android:id="@+id/xoasm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -191,7 +194,7 @@
             tools:ignore="MissingConstraints">
 
             <Button
-                android:id="@+id/canclenv"
+                android:id="@+id/canclesm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="6"
@@ -221,7 +224,7 @@
             tools:ignore="MissingConstraints">
 
             <ListView
-                android:id="@+id/hthinv"
+                android:id="@+id/hthism"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="6"
